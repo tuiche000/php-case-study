@@ -7,7 +7,7 @@
  */
 
 //递归
-$num = 3;
+$num = 100;
 
 function sum($num){
     static $result;

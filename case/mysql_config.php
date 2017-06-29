@@ -6,6 +6,7 @@
  * Time: 2:41
  */
 
+
 //链接数据库
 $servername = "localhost";
 $username = "root";
