@@ -7,7 +7,7 @@
  */
 
 //连接数据库
-include('../mysql_config.php');
+include('public/mysql_config.php');
 
 //查询数据
 $sql = "SELECT * FROM users";
@@ -15,7 +15,6 @@ $result = mysqli_query($conn,$sql);
 if(! $result){
     die('无法读取数据: ' . mysqli_error($conn));
 }
-
 
 ?>
 <!doctype html>
@@ -32,7 +31,7 @@ if(! $result){
     </style>
 </head>
 <body>
-<h2>用户管理 | <a href="add.php">添加用户</a></h2>
+<h2>用户管理 | <a href="public/add.php">添加用户</a></h2>
 <hr>
 <table border="1px">
     <tr>
@@ -50,9 +49,9 @@ if(! $result){
             echo "<td>{$row['id']}</td>";
             echo "<td>{$row['username']}</td>";
             echo "<td>{$row['password']}</td>";
-            echo "<td>" .date('Y-m-d h:i:s',$row['time']) ."</td>";
-            echo "<td><a href='edit.php?id={$row["id"]}'><button>修改</button></a></td>";
-            echo "<td><a href='delete.php?id={$row["id"]}'><button>删除</button></a></td>";
+            echo "<td>{$row['time']}</td>";
+            echo "<td><a href='public/edit.php?id={$row["id"]}'><button>修改</button></a></td>";
+            echo "<td><a href='public/delete.php?id={$row["id"]}'><button>删除</button></a></td>";
             echo "</tr>";
         }
     ?>

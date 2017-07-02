@@ -6,7 +6,7 @@
  * Time: 17:21
  */
 //连接数据库
-include('../mysql_config.php');
+include('mysql_config.php');
 
 $id = $_POST['id'];
 $username = $_POST['username'];
@@ -21,7 +21,7 @@ if ($conn->query($sql) === TRUE) {
     exit( "Error: " . $sql . "<br>" . $conn->error );
 }
 
-echo "<script>window.location.href='index.php';</script>";
+echo "<script>window.location.href='../../../../index.php';</script>";
 
 
 
