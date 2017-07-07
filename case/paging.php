@@ -6,8 +6,20 @@
  * Time: 15:39
  */
 
-include "user/public/mysql_config.php";
+include "user/public/mysql.inc.php";
+include "user/class/Model.class.php";
 include "user/class/paging.class.php";
+
+$m=new model('user1');
+
+$rows = $m->field('*')->where('id>1')->order('id desc')->select();
+echo '<pre>';
+print_r($rows);
+echo '</pre>';
+
+
+
+exit();
 
 $sql = "SELECT COUNT(*) FROM user1";
 

@@ -8,9 +8,9 @@
 
 //连接数据库
 include('public/mysql_config.php');
-
+$tbname = $_GET['tb'];
 //查询数据
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM $tbname";
 $result = mysqli_query($conn,$sql);
 if(! $result){
     die('无法读取数据: ' . mysqli_error($conn));
