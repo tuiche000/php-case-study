@@ -46,9 +46,7 @@ class Model
 
     }
 
-    function delete(){
-        $sql = "delete "
-    }
+
 
 }
 

@@ -21,7 +21,7 @@ if ($conn->query($sql) === TRUE) {
     exit( "Error: " . $sql . "<br>" . $conn->error );
 }
 
-echo "<script>window.location.href='../../../../index.php';</script>";
+echo "<script>window.location.href='../../../../index.html';</script>";
 
 
 
